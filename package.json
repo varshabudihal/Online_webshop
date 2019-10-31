@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -29,18 +29,6 @@
   "engines": {
     "node": "6.11.1",
     "npm": "1.2.x"
-  },
-  "description": "For this project, you need to have installed NodeJs in your systems. I have used express-generator and MongoDB to create this web application.\r To run this on your local machine, you need to download all the files from above and have MongoDB installed and running, to connect it to mongoose in the application. MongoDB is connected at localhost 27017\r To run the application:Run the following commands to NodeJS CMD\r 1.) npm install\r 2.) npm start",
-  "main": "app.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/varshabudihal/Online_webshop.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/varshabudihal/Online_webshop/issues"
-  },
-  "homepage": "https://github.com/varshabudihal/Online_webshop#readme"
+
+}
 }
