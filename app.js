@@ -8,7 +8,7 @@ var expressHbs = require('express-handlebars');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
-var Dotenv = require('dotenv').config();
+var Dotenv = require('dotenv');
 
 var routes = require('./routes/index');
 
