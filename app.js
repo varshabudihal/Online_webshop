@@ -8,6 +8,7 @@ var expressHbs = require('express-handlebars');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
+var Dotenv = require('dotenv').config();
 
 var routes = require('./routes/index');
 
@@ -15,7 +16,7 @@ var app = express();
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect('mongodb://localhost:27017/webshop1');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/webshop1');
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs',layoutsDir: __dirname + '/views/layouts/',
@@ -77,5 +78,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
+const port = process.env.PORT || 3000;
+app.listen(port);
 
 module.exports = app;
