@@ -12,11 +12,15 @@ var Dotenv = require('dotenv');
 
 var routes = require('./routes/index');
 
+var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
+                replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
+
 var app = express();
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/webshop1');
+mongoose.connect(options);
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs',layoutsDir: __dirname + '/views/layouts/',
@@ -80,5 +84,7 @@ app.use(function(err, req, res, next) {
 
 const port = process.env.PORT || 3000;
 app.listen(port);
+
+socket = io.listen(process.env.PORT);
 
 module.exports = app;
