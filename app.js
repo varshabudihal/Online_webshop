@@ -8,7 +8,7 @@ var expressHbs = require('express-handlebars');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
-var Dotenv = require('dotenv').config();
+// var Dotenv = require('dotenv').config();
 
 var routes = require('./routes/index');
 
@@ -26,7 +26,7 @@ var app = express();
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 
-mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost:27017/heroku_4xfxswx0');
+mongoose.connect('mongodb://localhost:27017/webshop1');
 
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/webshop1');
 // mongoose.connect(options);

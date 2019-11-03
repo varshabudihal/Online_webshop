@@ -65,7 +65,7 @@ var Product = require('../models/product');
 var mongoose = require('mongoose');
 
 mongoose.set('useNewUrlParser', true);
-mongoose.connect('mongodb://localhost:27017/heroku_4xfxswx0', {useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/webshop1', {useUnifiedTopology: true});
 
 var products = [
   new Product({
