@@ -100,7 +100,7 @@ app.use(function(err, req, res, next) {
   // console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 // });
 
-// socket = io.listen(process.env.PORT);
+  socket = io.listen(process.env.PORT);
 
 
 module.exports = app;
