@@ -6,10 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
     "body-parser": "^1.19.0",
->>>>>>> 96a6cf65ab3db2402de34167be03ad6b892017f1
     "connect-mongo": "^3.1.1",
     "cookie-parser": "~1.4.4",
     "csurf": "^1.10.0",
@@ -20,29 +17,20 @@
     "express-handlebars": "^3.1.0",
     "express-hbs": "^2.2.0",
     "express-session": "^1.17.0",
-<<<<<<< HEAD
-=======
     "favicon": "0.0.2",
->>>>>>> 96a6cf65ab3db2402de34167be03ad6b892017f1
     "hbs": "^4.0.6",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "mongoose": "^5.7.7",
     "morgan": "~1.9.1",
-<<<<<<< HEAD
     "serve-favicon": "^2.5.0"
   },
   "engines": {
     "node": "12.13.0",
     "npm": "6.12.1"
-=======
     "serve": "^11.2.0",
     "serve-favicon": "^2.5.0",
     "slice": "^1.0.0"
   },
-  "engines": {
-    "node": "6.11.1",
-    "npm": "1.2.x"
->>>>>>> 96a6cf65ab3db2402de34167be03ad6b892017f1
-  }
+  
 }
