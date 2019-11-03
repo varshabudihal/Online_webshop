@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var Product = require('../models/product');
 
 var mongoose = require('mongoose');
@@ -59,7 +59,7 @@ for (var i = 0; i<products.length; i++){
 function exit(){
   mongoose.disconnect();
 }
-=======
+
 var Product = require('../models/product');
 
 var mongoose = require('mongoose');
@@ -120,4 +120,3 @@ for (var i = 0; i<products.length; i++){
 function exit(){
   mongoose.disconnect();
 }
->>>>>>> 96a6cf65ab3db2402de34167be03ad6b892017f1

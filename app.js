@@ -8,12 +8,11 @@ var expressHbs = require('express-handlebars');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
-<<<<<<< HEAD
 var Dotenv = require('dotenv').config();
 
 var routes = require('./routes/index');
 
-=======
+
 var Dotenv = require('dotenv');
 
 var routes = require('./routes/index');
@@ -21,17 +20,17 @@ var routes = require('./routes/index');
 var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
                 replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
 
->>>>>>> 96a6cf65ab3db2402de34167be03ad6b892017f1
+
 var app = express();
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
-<<<<<<< HEAD
+
 mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost:27017/webshop1');
-=======
+
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/webshop1');
 mongoose.connect(options);
->>>>>>> 96a6cf65ab3db2402de34167be03ad6b892017f1
+
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs',layoutsDir: __dirname + '/views/layouts/',
@@ -93,15 +92,15 @@ app.use(function(err, req, res, next) {
   });
 });
 
-<<<<<<< HEAD
+
 const port = process.env.PORT || 3000;
 app.listen(port);
-=======
+
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
 socket = io.listen(process.env.PORT);
->>>>>>> 96a6cf65ab3db2402de34167be03ad6b892017f1
+
 
 module.exports = app;
