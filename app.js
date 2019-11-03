@@ -13,7 +13,7 @@ var MongoStore = require('connect-mongo')(session);
 var routes = require('./routes/index');
 
 
-var Dotenv = require('dotenv');
+var Dotenv = require('dotenv').config();
 
 var routes = require('./routes/index');
 
