@@ -26,7 +26,7 @@ var app = express();
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 
-mongoose.connect('mongodb://localhost:27017/webshop1');
+mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost:27017/webshop1');
 
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/webshop1');
 // mongoose.connect(options);
