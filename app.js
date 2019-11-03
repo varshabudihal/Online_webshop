@@ -29,7 +29,7 @@ mongoose.set('useUnifiedTopology', true);
 mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost:27017/webshop1');
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/webshop1');
-mongoose.connect(options);
+// mongoose.connect(options);
 
 
 // view engine setup
