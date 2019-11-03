@@ -8,7 +8,7 @@ var expressHbs = require('express-handlebars');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
-var Dotenv = require('dotenv');
+var Dotenv = require('dotenv').config();
 
 var routes = require('./routes/index');
 
@@ -78,7 +78,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-// const port = process.env.PORT || 3000;
-// app.listen(port);
+const port = process.env.PORT || 3000;
+app.listen(port);
 
 module.exports = app;
